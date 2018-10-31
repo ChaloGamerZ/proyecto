@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% load bootstrap %}
+{% block titulo %}
+{% endblock %}
+{% block contenido %}
+	<h1>Agregar Aprendiz</h1>
+	<div class="col-md-6">
+		<form action="" method='POST' enctype="multipart/form-data">
+			{% csrf_token %}
+			{{formulario|bootstrap}}
+			<input type="submit" value="Agregar	Aprendiz">
+		</form>
+	</div>
+			
+		
+{% endblock %}

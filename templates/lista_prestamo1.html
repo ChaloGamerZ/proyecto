@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block titulo %}
+	Lista de Prestamos
+{% endblock titulo %}
+{% block contenido %}
+	{% for p in lista %}
+			fecha del prestamo: {{p.fecha_prestamo}}
+			<br>
+			estado: {{p.estado}}
+			<br>
+			cantidad: {{p.cantidad}}
+			<br>
+			aprendiz: {{p.aprendiz}}
+			<br>
+	{% endfor %}
+
+	<a class="waves-effect waves-light btn"href="{%url 'agregar_prestamo' %}">AGR_PRESTAMO</a>
+	<br>
+	<br>
+	
+{% endblock contenido %}

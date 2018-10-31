@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block titulo %}
+	Detalles
+{% endblock titulo %}
+{% block contenido %}
+	<h3>Detalles {{material.nombre}}</h3>
+	<p><b>Nombre de Material </b> {{material.nombre}}</p>
+	<p><b>Codigo SENA </b> {{material.codigo_sena}}</p>
+	<p><b>Tipo de Elemento </b>{{material.tipo_elemento}}</p>
+	<p><b>Cantidad </b>{{material.cantidad}}</p>
+	<p><b>Marca </b>{{material.marca}}</p>
+	<p><b>Categoria </b>{{material.categoria}}</p>
+	<p><b>Cuentadante </b>{{material.cuentadante}}</p>	
+	<p><b>Ficha </b>{{material.ficha}}</p>
+{% endblock contenido %}

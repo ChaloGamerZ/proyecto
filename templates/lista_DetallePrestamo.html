@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block titulo %}
+	Lista Detalles del prestamo
+	
+{% endblock titulo %}
+{% block contenido %}
+
+	{% for d in lista %}
+			material: {{d.material}}
+			prestamo: {{d.prestamo}}
+			estado: {{d.estado}}
+			descripcion: {{d.descripcion}}
+			tipo de daño: {{d.tipo_dano}}
+			fecha devolucion: {{d.fecha_devolucion}}	
+			<a href="{% url 'editar_DetallePrestamo' id_Dprest=d.id %}">editar</a>		
+			
+	{% endfor %}			
+{% endblock contenido %}

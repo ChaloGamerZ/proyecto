@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% block titulo %}
+	
+{% endblock titulo %}
+{% block contenido %}
+	<form action="" method="POST" >
+		{% csrf_token %}
+		{{formulario.as_p}}
+      
+            {{ formset.management_form }}
+
+        {% for form in formset %}
+            
+            {{ form.id }}
+            <ul>
+                 
+                {{form.material}}
+                {{form.prestamo}}     
+                {{form.estado_elemento}}
+                {{form.cantidad}}
+                {{form.fecha_devolucion}}              
+
+            </ul>
+            
+        {% endfor %}
+ 
+		<input type="submit" value="AGREGAR PRESTAMO">
+	</form>
+
+
+
+{% endblock contenido %}
